@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Thakur Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+html{scroll-behavior:smooth;}
+body{
+margin:0;font-family:Segoe UI;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+
+nav{
+position:fixed;width:100%;display:flex;justify-content:space-between;
+padding:20px 60px;background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:100;
+}
+nav a{color:white;margin-left:25px;text-decoration:none;font-weight:bold}
+
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
+.hero h1{font-size:55px;color:#00ffd5}
+.circle{position:absolute;border-radius:50%;opacity:.3;animation:float 10s infinite alternate}
+.c1{width:300px;height:300px;background:#00ffd5;top:10%;left:10%}
+.c2{width:400px;height:400px;background:#ff00ff;bottom:10%;right:10%}
+@keyframes float{to{transform:translateY(150px)}}
+.btn{background:#00ffd5;padding:14px 30px;border-radius:30px;color:black;text-decoration:none;margin-top:20px;font-weight:bold}
+
+section{padding:90px 10%;}
+h2{text-align:center;color:#00ffd5;margin-bottom:40px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about-info{background:rgba(255,255,255,0.05);padding:30px;border-radius:20px}
+
+/* SKILLS */
+.skill{margin:20px 0}
+.bar{height:10px;background:#555;border-radius:20px}
+.bar span{display:block;height:100%;background:#00ffd5;border-radius:20px;width:0}
+
+/* PROJECTS */
+.projects{display:flex;flex-wrap:wrap;justify-content:center}
+.card{width:300px;background:rgba(255,255,255,.05);padding:25px;margin:15px;border-radius:20px;transition:.4s}
+.card:hover{transform:translateY(-10px);box-shadow:0 0 20px #00ffd5}
+
+/* CONTACT */
+.contact-container{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:800px;margin:auto;margin-bottom:40px}
+.contact-card{background:rgba(255,255,255,.05);padding:25px;border-radius:20px}
+.contact-card a{color:#00ffd5;text-decoration:none}
+.contact-card i{margin-right:10px;color:#00ffd5}
+input,textarea{width:100%;padding:15px;margin:10px 0;border:none;border-radius:10px}
+form{max-width:500px;margin:auto}
+
+/* SCROLL ANIMATION */
+.hidden{opacity:0;transform:translateY(50px);transition:1s}
+.show{opacity:1;transform:translateY(0)}
+
+footer{text-align:center;padding:20px;background:black}
+@media(max-width:768px){.about-grid,.contact-container{grid-template-columns:1fr;}nav{padding:20px}}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Aman Thakur</h2>
+<div>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<h1 id="typing"></h1>
+<p>Web Developer • Python Developer</p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2>About Me</h2>
+<div class="about-grid">
+<p>Hello 👋 I'm Aman Thakur, passionate Full Stack Developer who loves building modern websites & automation tools.</p>
+<div class="about-info">
+<p>Name: Aman Thakur</p>
+<p>Email: thakkuraman549@gmail.com</p>
+<p>Freelance: Available</p>
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="hidden">
+<h2>Education</h2>
+<div class="projects">
+<div class="card">Bachelor of Tecnology (B.TECH)</div>
+<div class="card">Web Development</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+<h2>Skills</h2>
+<div class="skill">HTML<div class="bar"><span data-width="90%"></span></div></div>
+<div class="skill">CSS<div class="bar"><span data-width="85%"></span></div></div>
+<div class="skill">JavaScript<div class="bar"><span data-width="75%"></span></div></div>
+<div class="skill">Python<div class="bar"><span data-width="80%"></span></div></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">Portfolio Website</div>
+<div class="card">Python Automation</div>
+<div class="card">Django Blog</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+<h2>Contact Me</h2>
+
+<div class="contact-container">
+<div class="contact-card">
+<h3>Connect With Me</h3>
+<p><i class="fab fa-github"></i> <a href="https://github.com/aman-committ" target="_blank">GitHub</a></p>
+<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/aman-thakur-28787a35b/" target="_blank">LinkedIn</a></p>
+<p><i class="fab fa-instagram"></i> <a href="https://instagram.com/__amanthakurr" target="_blank">Instagram</a></p>
+</div>
+
+<div class="contact-card">
+<h3>Contact Info</h3>
+<p><i class="fas fa-envelope"></i> thakkuraman549@gmail.com</p>
+<p><i class="fas fa-phone"></i> +91 8252817686</p>
+</div>
+</div>
+
+<form>
+<input placeholder="Your Name">
+<input placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+</section>
+
+<footer>© 2026 Aman Portfolio</footer>
+
+<script>
+/* typing */
+let text="Hello I'm Aman 👋";let i=0;
+function type(){if(i<text.length){document.getElementById("typing").innerHTML+=text.charAt(i);i++;setTimeout(type,80);}}
+type();
+
+/* scroll reveal + skill animation */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+entry.target.querySelectorAll("span").forEach(bar=>bar.style.width=bar.dataset.width);
+}});
+});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
